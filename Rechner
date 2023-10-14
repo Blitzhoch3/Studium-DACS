@@ -1,0 +1,27 @@
+start_price = 0
+Gesamt = 0
+Kosten = 0.20
+
+
+# Warum darf ich keine 3 oder 6 eingeben????? 😡
+
+print("Guten Tag, ich berechne dir deine Kilometerpauschale")
+km = float(input("Trage bitte deine gefahrenen Kilometer ein: "))  # int ginge auch
+if km == 0:
+    print("Ob du behindert bist?")
+else:
+    Gesamt = start_price + km * Kosten
+    print("Deine Kilometerpauschale beträgt:", Gesamt, "€")
+if 0 < km < 200:
+    print("Möchtest du das Ergebnis aufs Jahr hochgerechnet bekommen?")
+    Antwort = str(input("Ja oder Nein: "))
+    if Antwort in ("Nein" or "Nö" or "Naijm" or "N" or "nein", "n", "nö"):
+        print("Oke bis zum nächsten Mal")
+    else:
+        Gesamt = Gesamt * 200
+        print(f"Deine Kilometerpauschale im Jahr beträgt:{Gesamt}€")  # f sucht nach variablen in geschwungenen Klammern
+elif km > 200:
+    print("Fahr weniger Brudi! 🚗🚗")
+else:
+    print("Gib eine Zahl du Hond 🐶")
+
