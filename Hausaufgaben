@@ -1,0 +1,64 @@
+# 1
+x = 3
+y = "Sneke"
+z = x * y
+print(z)
+# 2
+a = len(z)
+print(a)
+# 3
+print(a*z)
+# 4
+w = "Doggie"
+u = "Kittie"
+i = len(w)
+l = len(u)
+
+if i == l:
+    print("Gleichlang")
+elif i > l:
+    print(w)
+else:
+    print(u)
+
+#5 In dem in einer Variable x ein String gespeichert ist und dann jedes zweite Zeichen des Strings ausgibt
+
+o = "Kauf ein Fahrrad von Kalkhoff"
+
+Schleifen = o[1::2]
+print(Schleifen)
+
+#6) In dem in einer Variable x ein String gespeichert ist und den String vorwärts ausgibt,
+# falls er gerade Länge hat und rückwärts ausgibt, falls er ungerade Länge hat
+
+satz = len(o)
+if satz % 2 == 0:
+    print(o)
+
+else:
+    print(o[::-1])
+
+#7 In dem in einer Variable x ein String gespeichert ist und den String genau dann ausgibt, wenn x ein "e" enthält.
+
+satz2 = "Es gibt nur 3 Leute."
+if "e" in satz2:
+    print(satz2)
+else:
+    print("Enthält kein e")
+
+# 8  In dem in einer Variable x ein String gespeichert ist und den String genau dann ausgibt, wenn x genau ein "e" enthält.
+
+satz4 = "Es gibt nur 4 Leute"
+if satz4.count("e") == 1:
+    print(satz4)
+else:
+    print("Mehr als ein e")
+
+#9) In dem in einer Variable x ein String gespeichert ist und den String genau dann ausgibt, wenn x genau einen Vokal enthält.
+
+satz5 = "A"
+if satz5.count("e" or "a" or "i" or "o" or "u") == 1:
+    print(satz5)
+else:
+    print("Mehr als ein Vokal")
+
