@@ -1,0 +1,102 @@
+# Kassen Programm: Zuzahlender Betrag einlesen + gegebenes Geld >>>> Wechselgeld berechnen in Münzen
+while 0==0:
+    y=0
+    x=0
+    zwanziger=0
+    def preis():
+        Preis= float(input("Preis des Produktes: "))
+        Bargeld= float(input("Preis des Produktes: "))
+        if Bargeld < Preis:
+            print("Zu wenig Geld mein Bre")
+
+        Wechselgeld= Bargeld - Preis
+
+        return Wechselgeld
+    Wechselgeld= preis()
+    if Wechselgeld <0:
+        Wechselgeld= Wechselgeld * -1
+        print("Du schuldest mir noch: ")
+    print(int(Wechselgeld), "€")
+    if Wechselgeld>49.99:
+        def wechselgeld_berechnen50er():
+            if Wechselgeld > 50:
+                y= Wechselgeld/50
+                y= int(y)
+                print("Du erhälst:", y, "x 50er Scheine")
+
+                x = (Wechselgeld - y*50)
+                return x
+        x=wechselgeld_berechnen50er()
+        if x > 19.99:
+            def wechselgeld_berechnen20er():
+
+                    zwanziger = x/20
+                    zwanziger = int(zwanziger)
+                    print("Du erhälst:", zwanziger, "x 20er Scheine")
+                    z = float(x - zwanziger*20)
+                    return z
+            z = wechselgeld_berechnen20er()
+        else:
+            z = x
+            if z > 9.99:
+                def wechselgeld_berechnen10er():
+
+                        zehner= z/10
+                        zehner = int(zehner)
+                        print("Du erhälst:", zehner, "x 10er Scheine")
+                        r = (z - zehner*10)
+                        return r
+                r=wechselgeld_berechnen10er()
+                if r > 4.99:
+                    def wechselgeld_berechnen5er():
+
+                            fünf= r/5
+                            fünf = int(fünf)
+                            print("Du erhälst:", fünf, "x 5er Scheine")
+                            p = r - fünf * 5
+                            return p
+                    p=wechselgeld_berechnen5er()
+                elif r >0.99:
+                        def wechselgeld_berechnen1er():
+                            eins= r / 1
+                            eins = int(eins)
+                            if eins%2==0:
+                                print("Du erhälst:", eins/2, "x 2€-Stücke")
+
+                            else:
+                                print("Du erhälst:", eins, "x 1€-Stücke")
+
+                            l = float(r - eins*5)
+                            return l
+                        l=wechselgeld_berechnen1er()
+                else:
+                    pass
+            else:
+                r=z
+                print(r)
+                if r > 4.99:
+                    def wechselgeld_berechnen5er():
+
+                            fünf= r/5
+                            fünf = int(fünf)
+                            print("Du erhälst:", fünf, "x 5er Scheine")
+                            p = r - fünf * 5
+                            return p
+                    p=wechselgeld_berechnen5er()
+                elif r >0.99:
+                        def wechselgeld_berechnen1er():
+                            eins= r / 1
+                            eins = int(eins)
+                            if eins%2==0:
+                                print("Du erhälst:", eins/2, "x 2€-Stücke")
+
+                            else:
+                                print("Du erhälst:", eins, "x 1€-Stücke")
+
+                            l = float(r - eins*5)
+                            return l
+                        l=wechselgeld_berechnen1er()
+                else:
+                    pass
+
+        print("_"*55)
