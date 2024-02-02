@@ -1,0 +1,19 @@
+import random
+import timeit
+start = timeit.default_timer()
+def bogoSort(a, n):
+    while not sorted(a) == a:
+        random.shuffle(a)
+        n += 1
+
+    return a,n
+
+a = [3, 2, 4, 1, 0, 5, 8, 9,10]
+counter=0
+a,counter = bogoSort(a, counter)
+
+print("Sortierte Liste:")
+print(a)
+stop = timeit.default_timer()
+print('Time: ', stop - start)
+print(counter)
